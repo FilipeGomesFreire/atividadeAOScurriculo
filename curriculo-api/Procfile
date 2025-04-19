@@ -1,9 +1,11 @@
-FROM eclipse-temurin:17-jdk-jammy AS build
-WORKDIR /workspace/app
+# Estágio de construção
+FROM eclipse-temurin:17-jdk-jammy AS builder
+WORKDIR /workspace
 COPY . .
 RUN ./mvnw clean package
 
+# Estágio de execução
 FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
-COPY --from=build /workspace/app/target/curriculo-api-*.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+COPY --from=builder /workspace/target/*.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]

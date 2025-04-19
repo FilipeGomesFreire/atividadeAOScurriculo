@@ -37,10 +37,17 @@ COPY target/curriculo-api-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
 
+instalei mvn -N io.takari:maven:wrapper
+
+e adicionei no gitignore 
+target/
+!mvnw
+!mvnw.cmd
+
+
 
 no RENDER
 escolhi webservice
 
-adicionado ao Docker Command
-java -jar target/curriculo-api-0.0.1-SNAPSHOT.jar
+
 
