@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "8056aad0-130f-4a80-afb9-e4adb89c0201",
+		"name": "Curriculo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44239582",
+		"_collection_link": "https://filipegomes-2867498.postman.co/workspace/Filipe-Gomes's-Workspace~9838a152-2cbf-477d-8b3c-63cdd3090550/collection/44239582-8056aad0-130f-4a80-afb9-e4adb89c0201?action=share&source=collection_link&creator=44239582"
+	},
+	"item": [
+		{
+			"name": "POST - Adicionar Currículo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"João Silva\",\r\n    \"email\": \"joao@email.com\",\r\n    \"telefone\": \"(81) 99999-9999\",\r\n    \"endereco\": \"Rua Exemplo, 123 - Recife/PE\",\r\n    \"objetivo\": \"Desenvolvedor Backend Java\",\r\n    \"experiencias\": [\r\n        {\r\n            \"cargo\": \"Estagiário em Desenvolvimento\",\r\n            \"empresa\": \"Empresa X\",\r\n            \"dataInicio\": \"2023-01-01\",\r\n            \"dataFim\": \"2023-12-31\",\r\n            \"descricao\": \"Desenvolvimento de APIs com Spring Boot\"\r\n        }\r\n    ],\r\n    \"formacoes\": [\r\n        {\r\n            \"instituicao\": \"Unicap\",\r\n            \"curso\": \"Ciência da Computação\",\r\n            \"nivel\": \"Bacharelado\",\r\n            \"dataConclusao\": \"2025-12-15\"\r\n        }\r\n    ],\r\n    \"habilidades\": [\r\n        {\r\n            \"nome\": \"Java\",\r\n            \"nivel\": \"Intermediário\"\r\n        },\r\n        {\r\n            \"nome\": \"Spring Boot\",\r\n            \"nivel\": \"Intermediário\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/curriculos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"curriculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Listar Todos os Currículos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/curriculos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"curriculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET por ID - Buscar um Currículo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/curriculos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"curriculos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Remover um Currículo",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
