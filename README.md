@@ -40,3 +40,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 no RENDER
 escolhi webservice
+
+adicionado ao Docker Command
+java -jar target/curriculo-api-0.0.1-SNAPSHOT.jar
+
