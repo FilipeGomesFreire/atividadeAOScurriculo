@@ -14,3 +14,17 @@ Dependencies:
 
 estrai o arquivo curriculo-api.zip na pasta 
 
+depois de ajeitar as coisas eu rotei com o comando 
+mvn spring-boot:run
+
+fiz o procfile com
+web: java -jar target/curriculo-api-0.0.1-SNAPSHOT.jar
+
+modificado o application.properties para produção
+
+Adiciona packaging jar no pom.xml
+
+<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>  <<<< aqui
+	<name>curriculo-api</name>
+
