@@ -28,3 +28,15 @@ Adiciona packaging jar no pom.xml
 	<packaging>jar</packaging>  <<<< aqui
 	<name>curriculo-api</name>
 
+
+tive q por um arquivo Dockerfile 
+
+FROM eclipse-temurin:17-jdk-jammy
+WORKDIR /app
+COPY target/curriculo-api-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+
+
+no RENDER
+escolhi webservice
