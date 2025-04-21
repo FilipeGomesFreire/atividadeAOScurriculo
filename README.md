@@ -1,5 +1,8 @@
 # atividadeAOScurriculo
 
+usei o https://console.neon.tech/
+para o banco de dados
+
 passo a passo
 
 start.spring.io
